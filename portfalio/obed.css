@@ -1,0 +1,474 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:'Poppins',sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Navbar Styles */
+  header {
+    position: fixed;
+    
+    width:100%;
+    
+    background-color: #060505d4;
+    padding: 15px 5%;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: space-between;
+     
+
+  }
+
+   .navbar a:hover,
+   .navbar a.active{
+    color: orangered;
+    border-bottom: 3px solid orangered;
+   }
+   
+  .logo {
+    font-size: 25px;
+    color: white;
+    font-weight: 600;
+    transition: 0.3s ease;
+  }
+  .logo:hover{
+   color: orangered; 
+   text-shadow: 0 0 25px orangered,
+                0 0 50px orangered;
+   transform: scale(1.1);             
+  }
+  span{
+    color:orangered
+  }
+  .navbar {
+    
+    display: flex;
+    margin: 10px;
+    align-items: center;
+  }
+  
+  nav a {
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    font-weight: 500;
+    margin: 0 20px;
+    border-radius: 3px solid transparent;
+    transition: 0.3s ease; 
+  }
+  
+  .contact-btn {
+    background-color: white;
+    color: black;
+   
+    border-radius: 8px;
+   
+    font-weight: 600;
+    transition: 0.3s ease;
+    height: 40px;
+    display: inline-block; 
+  }
+  
+  .contact-btn:hover {
+    background-color:white;
+    box-shadow: 0 0 25px orangered;
+    color: white;
+  }
+  
+  /* Hero Section */
+  .hello {
+    width: 100;
+    min-height: 100vh;
+    background: rgb(241, 241, 241);
+    display: flex;
+    align-items: center;
+    gap: 7em;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 12% ;
+    
+    background-color: #f5f5f5;
+  }
+  
+  .hello-text {
+    flex: 1;
+    max-width: 800px;
+  }
+  
+  .hello-text h1 {
+    font-size: 42px;
+  }
+  
+  .hello-text h1 .highlight {
+    color: #ff5500;
+  }
+  
+  .hello-text h2 {
+    font-size: 30px;
+  }
+  .hello-buttons {
+    width: 345px;
+    display: flex;
+    gap: 2em;
+  }
+  
+  .btn {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-right: 25px;
+    
+  }
+  .cv {
+    background-color:orangered;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border:2px solid black;
+  }
+  .btn:hover{
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+  }
+  .cv:hover{
+    background-color: white;
+    color:orangered;
+  }
+  .hello-buttons .btn-outline {
+    background-color: transparent;
+    color: #333;
+    border: 2px solid #333;
+  }
+  .hello-image{
+    
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hello-image img {
+    width: 280px;
+    height:300px;
+     border-radius: 50%; 
+  }
+
+
+
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: center;
+    }
+    .navbar {
+      flex-direction:row;
+      margin-top: 10px;
+    }
+    .hello {
+      padding: 20px 5%;
+      flex-direction: column;
+    }
+    .hello-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+    .hello-image img {
+      width: 200px;
+      height: 200px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .logo {
+      font-size: 20px;
+    }
+    nav a {
+      font-size: 14px;
+      margin: 0 10px;
+    }
+  }
+  
+
+/* eduction section */
+  
+.container {
+  display: flex;
+  width: 100%;
+  background-color: rgb(241, 241, 241);
+  padding:10%;
+  align-content:centre;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.education-section {
+  padding: 20px;
+  
+}
+
+.education-section h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.education-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.icon {
+  font-size: 2em;
+  margin-right: 15px;
+}
+
+.education-details h2 {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.education-details p {
+  margin: 5px 0;
+}
+
+.image-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(241, 241, );;
+  padding: 20px;
+}
+
+.image-section img {
+  width: 80%;
+  border-radius: 10px;
+}
+
+  /* table section */
+  
+  .table-container {
+    margin: 0 auto;
+    max-width: 800px;
+    background-color: #f5f5f5;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+  }
+  
+  thead {
+    background-color: orangered;
+    color: white;
+  }
+  
+  
+  
+  th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  th {
+    background-color: orangered ;
+    color: white;
+  }
+  
+  td {
+    color: #333;
+  }
+  
+  
+  h1 {
+    color:black;
+    
+  }
+
+  /* hobby section */
+  .hobbies-section {
+    width: 80px;
+    margin: 0 auto;
+    background-color:  #f5f5f5;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: flex;
+  }
+
+
+.hobby{
+ 
+  padding-left: 200px;
+  text-align: center;
+  padding:50px;
+  
+
+}
+.hobb-btn{
+  color: orangered;
+  
+}
+  
+  .media {
+    margin-top: 20px;
+  }
+  
+  audio, video {
+    display: block;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  /* Contact Form Section */
+  .contact {
+    background-color: #fff;
+    padding: 50px;
+    
+    text-align: center;
+  }
+  
+  .contact h2 {
+    font-size: 36px;
+  }
+  
+  .contact h2 .highlight {
+    color: #ff5500;
+  }
+  
+  form {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  button.btn {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  button.btn:hover {
+    background-color: #ff5500;
+  }
+  
+
+.socials {
+    display:flex;
+    justify-content:center;
+
+}
+
+
+/* ----------------------------------*/
+/*here starts styling for the footer*/
+
+footer {
+    text-align: center;
+    background-color: #333;
+    width:100%;
+    color:white;
+    padding:20px;
+}
+
+i {
+  height: 100%;
+  font-size:35px; 
+  border-radius: 50%;
+  background-color:black;
+  opacity: 0.87;
+  margin-right: 30px;
+  text-align: center;
+}
+/*hover for icons*/
+i:hover {
+    background-color: #ff5500;
+    transition:0.5s;
+}
+
+
+.f-nav-list {
+    color: white;
+    margin: 0 10px;
+    list-style-type:none;
+    display: flex;
+    justify-content: center;
+
+}
+
+a {
+    text-decoration: none;
+    color:inherit;
+}
+
+.f-nav-list li {
+    margin:20px;
+}
+
+/*hover for nav list in footer*/
+.f-nav-list li:hover {
+    opacity:1; 
+    color:black;
+}
+
+.f-bottom {
+    
+    height:50px;
+    width:100%;
+    display: flex;
+    justify-content: center;
+}
+
+.f bottom p {
+text-align:center;
+font-style: oblique ;
+}
+
+
+

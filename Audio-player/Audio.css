@@ -1,0 +1,132 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #0a0b0b;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+.audio-player {
+  width: 100%;
+  height:100%;
+  background-color: #1b1b1b;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+}
+
+.header {
+  display: flex;
+  justify-content:space-between;
+   
+ 
+  
+
+}
+
+
+button.menu {
+  background: none;
+  color: #ff9933;
+  border: none;
+  font-size: 18px;
+}
+
+#hplay{
+  width:25px;
+  height:25px;
+  margin-top: 17px;
+  margin-left: 1100px;
+  
+
+}
+/* h3.head{
+  text-size-adjust: 20px;
+} */
+
+
+#album-art {
+  width: 250px;
+  height: 250px;
+  margin: 10px auto;
+  padding-top:140px;
+  padding-bottom: 40px;
+}
+
+.time-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+
+input[type="range"] {
+  width: 90%;
+  cursor: pointer;
+  background: #333;
+  
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  background: #ff9933;
+  border-radius: 50%;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  
+  margin-top: 10px;
+}
+
+button {
+  /* margin: 5px; */
+  padding: px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: transparent; 
+}
+
+.end{
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.extra-controls {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
+}
+
+.extra-controls button {
+  background: none;
+  color: white;
+  border: none;
+  font-size: 18px;
+}
+#audio {
+  display: none;
+}
+#iback, #inext{
+  width: 34px;
+  height: 34px;
+}
+#iplay, #ipause{
+  width: 34px;
+  height:34px;
+}
+#end {
+  display: flex; /* Makes the divs align in a row */
+  justify-content: space-between; /* Adjusts spacing between items */
+}
+
+

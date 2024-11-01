@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Player</title>
+    <link rel="stylesheet" href="Audio.css">
+</head>
+    <body>
+        <div class="audio-player">
+            <div class="header">
+                <button class="menu">☰</button>
+                <img src="../media/play.png " alt="" 
+                 id="hplay"  >
+                <h3 class="head"> Audio Player</h3>
+            </div>
+            <img id="album-art" src="../media/music-mark.png" alt="hello">
+            <audio id="audio" controls>
+                <source src="../media/crown.mp3" >
+                Your browser does not support the audio element.
+            </audio>
+
+            <div class="time-bar">
+                <span id="current-time">0:00</span>
+                <input type="range" id="progress-bar" min="0" max="100" step="0.1" value="0">
+                <span id="duration">4:00</span>
+            </div>
+            
+            <div class="end">
+                <div id="song">       
+                <p>song1</p>
+                </div>
+                <div class="controls">
+                    <button id="prev">
+                        <img src="../media/back.png" alt="" id="iback">
+                    </button>
+                    <button id="play">
+                        <img src="../media/play.png" alt="" id="iplay">
+                    </button>
+                    <button id="pause">
+                        <img src="../media/pause.png" alt="" id="ipause">
+                    </button>
+                    <button id="next">
+                        <img src="../media/next.png" alt="" id="inext">
+                    </button>
+                </div>
+                <div>
+                    <button class="volume-icon">🔈</button>
+                    <button class="fullscreen-icon">⛶</button>
+                    <button class="more-icon">⋮</button>
+                </div>
+            </div>
+            
+            
+            <div class="extra-controls"></div>
+        </div>
+        <script src="Audio.js"></script>
+    </body>
+</html>

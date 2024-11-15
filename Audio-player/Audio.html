@@ -9,28 +9,57 @@
     <body>
         <div class="audio-player">
             <div class="header">
-                <button class="menu">☰</button>
+                <button class="menu" onclick="toggleMenu()" >☰</button>
+
                 <img src="../media/play.png " alt="" 
-                 id="hplay"  >
+                id="hplay"  >
                 <h3 class="head"> Audio Player</h3>
             </div>
-            <img id="album-art" src="../media/music-mark.png" alt="hello">
-            <audio id="audio" controls>
-                <source src="../media/crown.mp3" >
-                Your browser does not support the audio element.
-            </audio>
+            <div class="dropdown-menu" id="menuDropdown">
+                <input type="text" id="menuSearch" placeholder="Search" onkeyup="filterMenuItems()">
+                <ul>
+                    <li><a href="home.html"><img src="../media/home.png" alt="" id="iset">Home</a></li>
+                    <li><a href="musicLibrary.html"><img src="../media/music-archive.png" alt="" id="iset">Library</a></li>
+                    <li><a href="playQueue.html"><img src="../media/playQue.png" alt="" id="iset">Play Queue</a></li>
+                    <li><a href="playlist.html"><img src="../media/playlist.png" alt="" id="iset">Playlist</a></li>
+                    <li><a href="setting.html"><img src="../media/settings.png" alt="" id="iset">Settings</a></li>
+                </ul>
+
+            </div>
+            
+               
+           
+           
+            <div>
+                <img id="album-art" src="../media/music-mark.png" alt="hello">
+                <audio id="audio"      controls>
+                    <source src="../media/crown.mp3" >
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+
+            <!-- <div id="playlist">
+                <h4>Playlist</h4>
+                <ul id="track-list">
+                    <li data-src="../media/crown.mp3">Song 1</li>
+                    <li data-src="../media/Sing to Me of Heaven2.mp3">Song 2</li>
+                    <li data-src="../media/184.mwesenimuvuz'impundu.mp3">Song 3</li>
+                </ul>
+            </div> -->
 
             <div class="time-bar">
                 <span id="current-time">0:00</span>
-                <input type="range" id="progress-bar" min="0" max="100" step="0.1" value="0">
+                <input class="progress" type="range" id="progress-bar" min="0" max="100" step="0.1" value="0" title="0:00">
                 <span id="duration">4:00</span>
             </div>
             
             <div class="end">
-                <div id="song">       
+                <div  id="song"  class="right-control">       
                 <p>song1</p>
                 </div>
                 <div class="controls">
+                    <button id="loop"><img src="../media/repeat.png" alt="" id="iback">
+                    </button>
                     <button id="prev">
                         <img src="../media/back.png" alt="" id="iback">
                     </button>
@@ -43,9 +72,12 @@
                     <button id="next">
                         <img src="../media/next.png" alt="" id="inext">
                     </button>
+                    <button id="shuffle"><img src="../media/shuffle.png" alt="" id="iback"></button>
+                    
                 </div>
-                <div>
-                    <button class="volume-icon">🔈</button>
+                <div class="right-control">
+                    <button  id="mute" class="volume-icon">🔈</button>
+                    <input  class="progress" type="range" id="volume-slider" min="0" max="0.8" step="0.1" value="2">
                     <button class="fullscreen-icon">⛶</button>
                     <button class="more-icon">⋮</button>
                 </div>

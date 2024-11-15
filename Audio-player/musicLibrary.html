@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Library</title>
+    <link rel="stylesheet" href="musicLibrary.css">
+</head>
+<body>
+    <div class="library-container">
+        <!-- Header Section -->
+        <header class="header">
+            <h1>Music Library</h1>
+            <input type="text" id="searchBar" placeholder="Search songs..." onkeyup="searchLibrary()">
+        </header>
+
+        <!-- Music Categories -->
+        <nav class="categories">
+            <button onclick="filterByCategory('all')">All</button>
+            <button onclick="filterByCategory('pop')">Pop</button>
+            <button onclick="filterByCategory('rock')">Rock</button>
+            <button onclick="filterByCategory('jazz')">Jazz</button>
+        </nav>
+
+        <!-- Library Section -->
+        <section id="library" class="library">
+            <!-- Songs will be dynamically populated -->
+        </section>
+
+        <!-- Footer Audio Player -->
+        <footer class="audio-player">
+            <audio id="audioPlayer" controls></audio>
+            <p id="currentSong">Select a song to play</p>
+        </footer>
+    </div>
+
+    <script src="musicLibrary.js"></script>
+</body>
+</html>

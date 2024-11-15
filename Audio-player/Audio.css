@@ -3,7 +3,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #0a0b0b;
+  background-color:  #1b1b1b;
   font-family: Arial, sans-serif;
   color: white;
 }
@@ -20,17 +20,14 @@ body {
 
 .header {
   display: flex;
-  justify-content:space-between;
-   
- 
-  
-
+  margin-top: -12px;
 }
+
 
 
 button.menu {
   background: none;
-  color: #ff9933;
+  color: #8a7309d4;
   border: none;
   font-size: 18px;
 }
@@ -39,20 +36,24 @@ button.menu {
   width:25px;
   height:25px;
   margin-top: 17px;
-  margin-left: 1100px;
+  padding: 0px 10px 0px 30px;
+  
+
   
 
 }
-/* h3.head{
-  text-size-adjust: 20px;
-} */
+#menuSearch {
+  padding-left: 30px; /* Add padding to the left for space */
+  background: url('../media/search.png') no-repeat left center;
+  background-size: 20px 20px; /* Adjust the size of the icon */
+}
 
 
 #album-art {
   width: 250px;
   height: 250px;
   margin: 10px auto;
-  padding-top:140px;
+  padding-top:115px;
   padding-bottom: 40px;
 }
 
@@ -61,21 +62,70 @@ button.menu {
   align-items: center;
   justify-content: space-between;
   color: white;
-}
-
-input[type="range"] {
-  width: 90%;
-  cursor: pointer;
-  background: #333;
   
 }
 
+input[type="range"]{
+  width: 90%;
+  accent-color: orangered;
+}
+input[type="range"]
+::-webkit-slider-runnable-track {
+  width: 90%;
+  background:orangered; /* Background of the slider track */
+    height: 4px; 
+    border-radius: 2px;
+    outline: none;
+}
+ 
+  
+
+
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
-  width: 15px;
+  appearance: none;
+  width: 15px; 
   height: 15px;
-  background: #ff9933;
+  background: orangered; 
   border-radius: 50%;
+  cursor: pointer;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+  background: #333;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  background: orangered;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  background: linear-gradient(to right, orangered 0%, orangered var(--progress-percent), #333 var(--progress-percent), #333 100%);
+}
+
+/* For Firefox */
+input[type="range"]::-moz-range-track {
+  background: #333;
+  height: 6px;
+  border-radius: 3px;
+}
+
+input[type="range"]::-moz-range-progress {
+  background: orangered;
+}
+
+/* For IE */
+input[type="range"]::-ms-track {
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+  height: 6px;
+}
+
+input[type="range"]::-ms-fill-lower {
+  background: orangered;
+}
+input[type="range"]::-ms-fill-upper {
+  background: #333;
 }
 
 .controls {
@@ -86,10 +136,7 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 button {
-  /* margin: 5px; */
-  padding: px;
-  background-color: #333;
-  color: white;
+  color: aliceblue;
   border: none;
   border-radius: 50%;
   cursor: pointer;
@@ -117,16 +164,81 @@ button {
   display: none;
 }
 #iback, #inext{
-  width: 34px;
-  height: 34px;
+  width: 24px;
+  height: 24px;
+  padding:20px
 }
 #iplay, #ipause{
-  width: 34px;
-  height:34px;
+  width: 60px;
+  height:60px;
 }
-#end {
-  display: flex; /* Makes the divs align in a row */
-  justify-content: space-between; /* Adjusts spacing between items */
+
+.right-control{
+padding-top: 30px;
 }
 
 
+#playlist {
+  margin-top: 20px;
+  color: #eb9c3c;
+  text-align: left;
+}
+
+#track-list {
+  list-style: none;
+  padding: 0;
+}
+
+#track-list li {
+  cursor: pointer;
+  padding: 5px;
+}
+
+#track-list li:hover {
+  background-color: #333;
+}
+
+#volume-slider {
+  width: 50px;
+  margin: 0 10px;
+}
+
+
+.dropdown-menu {
+  display: none; 
+  position: absolute;
+  top: 50px; 
+  left: 10px; 
+  background-color: #333;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.dropdown-menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dropdown-menu li {
+  padding: 8px;
+  text-align: left;
+}
+
+.dropdown-menu li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #555;
+}
+#iset{
+width: 20px;
+height: 20px;
+padding: 0px 15px ;
+margin-bottom: -4px;
+}

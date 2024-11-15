@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Queue</title>
+    <link rel="stylesheet" href="playQueue.css">
+</head>
+<body>
+    <div class="queue-container">
+        <!-- Header -->
+        <header class="header">
+            <h1>Play Queue</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Audio.html">Audio Player</a></li>
+                    <li><a href="musicLibrary.html">Library</a></li>
+                    <li><a href="playQueue.html">Play Queue</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Queue Section -->
+        <section class="queue-section">
+            <h2>Queued Songs</h2>
+            <ul class="queue-list" id="queueList">
+                <!-- Queue items will be dynamically loaded here -->
+            </ul>
+        </section>
+
+        <!-- Footer with Audio Player -->
+        <footer class="audio-player">
+            <audio id="audioPlayer" controls></audio>
+            <p id="currentSong">Select a song to play</p>
+        </footer>
+    </div>
+
+    <script src="playQueue.js"></script>
+</body>
+</html>

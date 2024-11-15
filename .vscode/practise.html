@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selectable List</title>
+  <style>
+    /* Basic styling for selected item */
+    .selected {
+      background-color: #4CAF50;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Select an Item from the List</h2>
+  <ul id="itemList">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+  </ul>
+
+  <script>
+    // JavaScript to handle item selection
+    const listItems = document.querySelectorAll("#itemList li");
+
+    listItems.forEach(item => {
+      item.addEventListener("click", () => {
+        // Remove 'selected' class from any previously selected item
+        listItems.forEach(i => i.classList.remove("selected"));
+        
+        // Add 'selected' class to the clicked item
+        item.classList.add("selected");
+        
+        // Display the selected item (optional)
+        console.log("Selected Item:", item.textContent);
+      });
+    });
+  </script>
+
+</body>
+</html>

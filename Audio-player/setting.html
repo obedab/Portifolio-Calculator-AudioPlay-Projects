@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="setting.css">
+</head>
+<body>
+    <div class="settings-container">
+        <!-- Header -->
+        <header class="header">
+            <h1>Settings</h1>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="audi.html">Audio Player</a></li>
+                    <li><a href="musicLibrary.html">Library</a></li>
+                    <li><a href="playQueue.html">Play Queue</a></li>
+                    <li><a href="setting.html">Settings</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Settings Section -->
+        <section class="settings-section">
+            <h2>Preferences</h2>
+
+            <!-- Theme Selection -->
+            <div class="setting-item">
+                <label for="theme">Theme:</label>
+                <select id="theme">
+                    <option value="light">Light</option>
+                    <option value="dark" selected>Dark</option>
+                </select>
+            </div>
+
+            <!-- Playback Speed -->
+            <div class="setting-item">
+                <label for="playback-speed">Playback Speed:</label>
+                <input type="range" id="playback-speed" min="0.5" max="2" step="0.1" value="1">
+                <span id="playback-speed-value">1x</span>
+            </div>
+
+            <!-- Clear Data -->
+            <div class="setting-item">
+                <button id="clear-data">Clear App Data</button>
+            </div>
+        </section>
+    </div>
+
+    <script src="setting.js"></script>
+</body>
+</html>
